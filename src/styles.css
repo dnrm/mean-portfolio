@@ -16,41 +16,63 @@ body {
 }
 
 header {
-    display: block;
+    display: flex;
     width: 100%;
-    height: 70px;
     background: rgb(248, 248, 248);
     position: fixed;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.6);
 }
 
 header ul {
-    display: block;
-    width: 38%;
-    height: inherit;
-    margin: 0px auto;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+header ul#home {
+    justify-content: flex-start;
 }
 
 header ul li {
-    display: inline-block;
-    margin: 0px auto;
-    text-align: center;
-    line-height: 70px;
+    display: inline;
 }
 
 header a {
     display: block;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 15px;
     height: inherit;
     text-decoration: none;
     color: black;
     transition: all 300ms;
 }
 
-header a:hover {
-    background-color: rgba(0, 0, 0, 0.486);
+header a:hover,
+.active {
+    background-color: rgba(0, 0, 0, 0.678);
+    color: white;
 }
 
-header #logo a {
-    background-color: transparent;
+/* ! Main Container */
+
+#content {
+    min-height: 500px;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 40px black;
+    background: rgb(255, 255, 255);
+    padding-top: 120px;
+}
+
+/* ! Footer */
+
+#footer {
+    width: 80%;
+    margin: 0px auto;
+    padding: 15px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
 }
