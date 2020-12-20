@@ -27,3 +27,7 @@ article.about {
     margin-bottom: 20px;
     font-size: 15px;
 }
+
+.about h2 {
+    border-bottom: 1px solid #000;
+}
