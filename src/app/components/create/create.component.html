@@ -21,6 +21,10 @@
             <label for="langs">Languages</label>
             <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs">
         </p>
+        <p>
+            <label for="image">Image</label>
+            <input type="file" name="image" placeholder="Upload image">
+        </p>
 
         <input type="submit" value="Submit">
     </form>

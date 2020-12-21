@@ -1,0 +1,39 @@
+.container {
+    padding: 50px;
+    padding-top: 0px;
+}
+
+.container h2 {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+form {
+    width: 50%;
+}
+
+form label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form input[type="text"], input[type="numbe"], input[type="email"], textarea {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+form button, input[type="submit"] {
+    font-size: 16px;
+    padding: 15px 20px;
+    display: block;
+    margin-top: 15px;
+    color: white;
+    background: linear-gradient(45deg,#CA4246 16.666%, #E16541 16.666%, #E16541 33.333%, #F18F43 33.333%, #F18F43 50%, #8B9862 50%, #8B9862 66.666%, #476098 66.666%, #476098 83.333%, #A7489B 83.333%);
+    border: none;
+    border-radius: 5px;
+}
