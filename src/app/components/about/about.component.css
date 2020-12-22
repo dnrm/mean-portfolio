@@ -14,7 +14,7 @@
 
 #title h1 {
     font-size: 60px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
 }
 
@@ -34,4 +34,6 @@ article.about {
 
 .about h2 {
     border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
