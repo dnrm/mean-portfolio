@@ -1,31 +1,52 @@
 <div class="container">
     <h2>{{title}}</h2>
+    <div class="message success" *ngIf="status == 'success'">
+        The project was created successfully. You can view it <a [routerLink]="['/project', savedProject._id]">here</a>
+    </div>
+    <div class="message failed" *ngIf="status == 'failed'">
+        There was an error creating the project
+    </div>
     <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
         <p>
             <label for="name">Name</label>
-            <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name">
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required>
+            <span *ngIf="name.touched && !name.valid" class="form_error">
+                Please enter a name
+            </span>
         </p>
         <p>
             <label for="description">Description</label>
-            <textarea name="description" #description="ngModel" [(ngModel)]="project.description"></textarea>
+            <textarea name="description" #description="ngModel" [(ngModel)]="project.description" required></textarea>
+            <span *ngIf="description.touched && !description.valid" class="form_error">
+                Please enter a description
+            </span>
         </p>
         <p>
             <label for="category">Category</label>
-            <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category">
+            <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category" required>
+            <span *ngIf="category.touched && !category.valid" class="form_error">
+                Please enter a category
+            </span>
         </p>
         <p>
             <label for="year">Release Date</label>
-            <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year">
+            <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year" required>
+            <span *ngIf="year.touched && !year.valid" class="form_error">
+                Please enter a year
+            </span>
         </p>
         <p>
             <label for="langs">Languages</label>
-            <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs">
+            <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required>
+            <span *ngIf="langs.touched && !langs.valid" class="form_error">
+                Please enter a the languages used
+            </span>
         </p>
         <p>
             <label for="image">Image</label>
-            <input type="file" name="image" placeholder="Upload image">
+            <input type="file" name="image" placeholder="Upload image" (change)="fileChangeEvent($event)">
         </p>
 
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" [disabled]="!projectForm.form.valid">
     </form>
 </div>

@@ -1,0 +1,51 @@
+section {
+    padding: 90px 50px 50px 50px;
+}
+
+.container .image {
+    float: left;
+    width: 49%;
+}
+
+.container .image img {
+    width: 100%;
+}
+
+.container .data {
+    margin-left: 25px;
+    float: right;
+    width: 48%;
+}
+
+img {
+    height: 400px;
+}
+
+.button-edit ,
+.button-delete {
+    width: 40%;
+    float: left;
+    margin-right: 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+}
+
+.button-edit {
+    background: orange;
+}
+
+.button-edit:hover {
+    background: rgb(155, 101, 0);
+}
+
+.button-delete {
+    background: rgb(255, 60, 0);
+}
+
+.button-delete:hover {
+    background: rgb(133, 31, 0);
+}

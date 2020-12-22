@@ -31,7 +31,7 @@ header ul {
     justify-content: flex-end;
     align-items: center;
     list-style: none;
-    background-color: #003035;
+    background-color: #011b29;
 }
 
 header ul#home {
@@ -63,7 +63,7 @@ header a:hover,
     min-height: 500px;
     width: 80%;
     margin: 0 auto;
-    box-shadow: 0px 0px 40px black;
+    box-shadow: 0px -20px 50px rgba(0, 0, 0, 0.563);
     background: rgb(255, 255, 255);
 }
 
