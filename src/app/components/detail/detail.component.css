@@ -2,9 +2,18 @@ section {
     padding: 90px 50px 50px 50px;
 }
 
+h1 {
+    font-size: 1.3em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
 .container .image {
     float: left;
-    width: 49%;
+    width: 100%;
 }
 
 .container .image img {
@@ -12,13 +21,17 @@ section {
 }
 
 .container .data {
-    margin-left: 25px;
     float: right;
-    width: 48%;
+    width: 100%;
+}
+
+.container .margin {
+    margin-left: 25px;
 }
 
 img {
-    height: 400px;
+    height: 100%;
+    padding-bottom: 25px;
 }
 
 .button-edit ,
@@ -35,17 +48,9 @@ img {
 }
 
 .button-edit {
-    background: orange;
-}
-
-.button-edit:hover {
-    background: rgb(155, 101, 0);
+    background: linear-gradient(45deg,#CA4246 16.666%, #E16541 16.666%, #E16541 33.333%, #F18F43 33.333%, #F18F43 50%, #8B9862 50%, #8B9862 66.666%, #476098 66.666%, #476098 83.333%, #A7489B 83.333%);
 }
 
 .button-delete {
-    background: rgb(255, 60, 0);
-}
-
-.button-delete:hover {
-    background: rgb(133, 31, 0);
+    background: linear-gradient(45deg,#CA4246 16.666%, #E16541 16.666%, #E16541 33.333%, #F18F43 33.333%, #F18F43 50%, #8B9862 50%, #8B9862 66.666%, #476098 66.666%, #476098 83.333%, #A7489B 83.333%);
 }
