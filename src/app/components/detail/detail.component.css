@@ -45,6 +45,7 @@ img {
     padding: 10px;
     color: white;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .button-edit {
