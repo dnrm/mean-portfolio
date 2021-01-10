@@ -42,11 +42,15 @@
                 Please enter a the languages used
             </span>
         </p>
-        <p>
+        <p class="defect">
             <label for="image">Image</label>
+            <span class="image" *ngIf="project.image">
+                <img src="{{this.url + 'get-image/' + project.image}}" width="250px">
+                <br>
+            </span>
             <input type="file" name="image" placeholder="Upload image" (change)="fileChangeEvent($event)">
         </p>
-
+        
         <input type="submit" value="Submit" [disabled]="!projectForm.form.valid">
     </form>
 </div>
