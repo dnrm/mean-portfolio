@@ -1,0 +1,47 @@
+.container {
+    padding: 70px 30px;
+}
+
+h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 25px;
+}
+
+ul {
+    list-style: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+}
+
+.project {
+    display: block;
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.project #img {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+
+.project h3, p {
+    color: black;
+}
+
+.project a {
+    text-decoration: none;
+}
+
+.project img {
+    width: 100%;
+}

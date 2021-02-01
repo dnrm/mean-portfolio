@@ -1,0 +1,18 @@
+<header>
+  <ul id="home">
+    <li id="logo"><a [routerLink]="['/']">Dannermm</a></li>
+  </ul>
+  <ul>
+    <li><a [routerLink]="['/about']" [routerLinkActive]="['active']">About</a></li>
+    <li><a [routerLink]="['/projects']" [routerLinkActive]="['active']">Projects</a></li>
+    <li><a [routerLink]="['/create-project']" [routerLinkActive]="['active']">Create</a></li>
+    <li><a [routerLink]="['/contact']" [routerLinkActive]="['active']">Contact</a></li>
+  </ul>
+</header>
+<section id="content">
+  <router-outlet></router-outlet>
+</section>
+<footer id="footer">
+  <p>Dannermm &copy;</p>
+  <p>Made with Angular with ❤️</p>
+</footer>
