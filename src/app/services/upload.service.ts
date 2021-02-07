@@ -18,6 +18,7 @@ export class UploadService {
             let xhr = new XMLHttpRequest();
             for (let i = 0; i < files.length; i++) {
                 formData.append(name, files[i]);
+                console.log(files[i]);
             }
 
             xhr.onreadystatechange = function() {
