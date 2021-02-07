@@ -43,6 +43,10 @@ export class DetailComponent implements OnInit {
     )
   }
 
+  setConfirm(confirm: boolean) {
+    this.confirm = confirm;
+  }
+
   deleteProject(id) {
     this._projectService.deleteProject(id).subscribe(
       response => {
