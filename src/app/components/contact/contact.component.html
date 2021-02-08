@@ -1,1 +1,10 @@
-<p>contact works!</p>
+<div class="container">
+    <h1>Contact</h1>
+    Slider size:
+    <input type="number" [(ngModel)]="widthSlider">
+    <button (click)="loadSlider()">Load Slider</button>
+    <button (click)="resetSlider()">Reset Slider</button>
+    <div *ngIf="widthToSlider">
+        <app-slider [width]="widthToSlider"></app-slider>
+    </div>
+</div>
