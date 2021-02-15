@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -9,12 +9,12 @@ export class ContactComponent implements OnInit {
 
   public widthSlider: number;
   public widthToSlider: number;
+  public author: any;
+  @ViewChild('title') title;
 
   constructor() { }
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void { }
 
   loadSlider() {
     this.widthToSlider = null;
@@ -25,4 +25,9 @@ export class ContactComponent implements OnInit {
     this.widthToSlider = null;
   }
 
+  getAuthor(event) {
+    this.author = event;
+    console.log(event);
+    console.log(this.title);
+  }
 }

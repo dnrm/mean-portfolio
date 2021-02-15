@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 declare var $:any;
 
@@ -10,6 +10,13 @@ declare var $:any;
 export class SliderComponent implements OnInit {
 
   @Input() width: number;
+  @Output() getAuthor = new EventEmitter();
+
+  public author: any = {
+    name: 'daniel',
+    lastname: 'medina',
+    github: 'dnrm'
+  }
 
   constructor() { }
 
@@ -22,6 +29,10 @@ export class SliderComponent implements OnInit {
         autoControls: true
       });
     });
+  }
+
+  emit(event) {
+    this.getAuthor.emit(this.author);
   }
 
 }

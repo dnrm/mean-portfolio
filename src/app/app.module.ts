@@ -12,6 +12,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { EditComponent } from './components/edit/edit.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { HighlightedDirective } from './highlighted.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SliderComponent } from './components/slider/slider.component';
     ContactComponent,
     DetailComponent,
     EditComponent,
-    SliderComponent
+    SliderComponent,
+    HighlightedDirective
   ],
   imports: [
     BrowserModule,
