@@ -1,3 +1,4 @@
+![Repository Banner](https://raw.githubusercontent.com/dnrm/dnrm/master/img/Blue%20and%20Orange%20COVID-19%20Friendly%20Corporate%20Healthcare%20and%20Medical%20X-Frame%20Banner.png)
 # Mean Portfolio
 
 This project consists of a full stack developer portfolio. It is the final project for my Master in Javascript course ([view here](https://www.udemy.com/course/master-en-javascript-aprender-js-jquery-angular-nodejs-y-mas/)) by Victor Robles. It is written using Angular as the fron-end framework. It handles file uploads, project creation, and getting data from an API. It was completed in the course of 4.5 months. Starting in October 13th 2020, and finishing on February the 14th 2021.
