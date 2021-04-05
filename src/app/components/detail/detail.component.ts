@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
-import { Global } from '../../services/global';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-detail',
@@ -21,7 +21,7 @@ export class DetailComponent implements OnInit {
     private _router: Router,
     private _route: ActivatedRoute
   ) {
-    this.url = Global.url;
+    this.url = environment.API;
     this.confirm = false;
   }
 

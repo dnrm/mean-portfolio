@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
 import { UploadService } from '../../services/upload.service';
-import { Global } from '../../services/global';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-create',
@@ -35,14 +35,14 @@ export class CreateComponent implements OnInit {
       response => {
         console.log(response);
         if (response.project) {
-          this._uploadService.makeFileRequest(Global.url + 'upload-image/' + response.project._id, [], this.filesToUpload, 'image')
+          this._uploadService.makeFileRequest(environment.API + 'upload-image/' + response.project._id, [], this.filesToUpload, 'image')
             .then((result: any) => {
               this.status = 'success';
               this.savedProject = result.project;
               form.reset();
             });
         } else {
-          this.status = 'failed';  
+          this.status = 'failed';
         }
       },
       error => {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
-import { Global } from '../../services/global';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-projects',
@@ -17,7 +17,7 @@ export class ProjectsComponent implements OnInit {
   constructor(
     private _http: ProjectService
   ) {
-    this.url = Global.url;
+    this.url = environment.API;
   }
 
   ngOnInit(): void {

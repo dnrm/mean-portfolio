@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { UploadService } from '../../services/upload.service';
 import { ProjectService } from "../../services/project.service";
 import { Project } from "../../models/project";
-import { Global } from '../../services/global';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-edit',
@@ -29,7 +29,7 @@ export class EditComponent implements OnInit {
     ) {
     this.title = "Edit Project";
     this.project = new Project('', '', '', '', new Date().getFullYear(), '', '');
-    this.url = Global.url;
+    this.url = environment.API;
   }
 
   ngOnInit(): void {
@@ -57,7 +57,7 @@ export class EditComponent implements OnInit {
         console.log(response);
         if (response.project) {
           if (this.filesToUpload) {
-            this._uploadService.makeFileRequest(Global.url + 'upload-image/' + response.project._id, [], this.filesToUpload, 'image')
+            this._uploadService.makeFileRequest(this.url + '/upload-image/' + response.project._id, [], this.filesToUpload, 'image')
               .then((result: any) => {
                 this.status = 'success';
                 this.savedProject = result.project;
