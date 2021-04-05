@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment'
 import { Global } from './global';
 
 @Injectable()
@@ -9,7 +10,7 @@ export class UploadService {
     public url: string;
 
     constructor() {
-        this.url = Global.url;
+        this.url = environment.API;
     }
 
     makeFileRequest(url: string, params: Array<string>, files: Array<File>, name: string) {
