@@ -5,6 +5,7 @@ import { ProjectService } from "../../services/project.service";
 import { Project } from "../../models/project";
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-edit',
@@ -22,6 +23,7 @@ export class EditComponent implements OnInit {
   public url: string;
 
   constructor(
+    private _title: Title,
     private _projectService: ProjectService,
     private _uploadService: UploadService,
     private _route: ActivatedRoute,
@@ -33,6 +35,7 @@ export class EditComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this._title.setTitle('edit | dannermm')
     this._route.params.subscribe(params => {
       let id = params.id;
       this.getProject(id)

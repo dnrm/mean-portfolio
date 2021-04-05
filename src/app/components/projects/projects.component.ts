@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
 import { environment } from '../../../environments/environment';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-projects',
@@ -15,6 +16,7 @@ export class ProjectsComponent implements OnInit {
   public url: string;
 
   constructor(
+    private _title: Title,
     private _http: ProjectService
   ) {
     this.url = environment.API;
@@ -22,6 +24,7 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProjects();
+    this._title.setTitle('projects | dannermm')
   }
 
   getProjects() {

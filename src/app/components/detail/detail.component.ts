@@ -3,7 +3,7 @@ import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { environment } from '../../../environments/environment';
-
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-detail',
@@ -18,6 +18,7 @@ export class DetailComponent implements OnInit {
   public confirm: boolean;
 
   constructor(
+    private _title: Title,
     private _projectService: ProjectService,
     private _router: Router,
     private _route: ActivatedRoute
@@ -27,10 +28,12 @@ export class DetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this._title.setTitle('dannermm')
     this._route.params.subscribe(params => {
       let id = params.id;
       this.getProject(id)
     })
+    this._title.setTitle(`${this.project.name} | dannermm`)
   }
 
   getProject(id) {

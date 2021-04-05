@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -12,7 +12,7 @@ export class AboutComponent implements OnInit {
   public email: string;
   public website: string;
 
-  constructor() {
+  constructor(private _title: Title) {
     this.title = 'Daniel Medina';
     this.subtitle = 'Web Developer';
     this.email = 'daniel@medina.com';
@@ -20,6 +20,7 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this._title.setTitle('about | dannermm')
   }
 
 }

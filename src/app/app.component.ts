@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-portfolio';
+  constructor(
+    private _title: Title
+  ) { }
+
+  ngOnInit(): void {
+    this._title.setTitle('dannermm')
+  }
+
 }

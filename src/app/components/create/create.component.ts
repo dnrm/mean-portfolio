@@ -3,7 +3,7 @@ import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
 import { UploadService } from '../../services/upload.service';
 import { environment } from '../../../environments/environment';
-
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-create',
@@ -20,6 +20,7 @@ export class CreateComponent implements OnInit {
   public savedProject;
 
   constructor(
+    private _title: Title,
     private _projectService: ProjectService,
     private _uploadService: UploadService
     ) {
@@ -28,6 +29,7 @@ export class CreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this._title.setTitle('create | dannermm')
   }
 
   onSubmit(form) {
