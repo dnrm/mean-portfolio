@@ -1,7 +1,7 @@
 <section>
     <div class="container" *ngIf="project">
         <div class="image" *ngIf="project.image">
-            <img src="{{url + 'get-image/' + project.image}}">
+            <img src="{{url + '/get-image/' + project.image}}">
         </div>
         <div class="data" [ngClass]="{'margin' : project.image}">
             <h1>{{project.name}}</h1>
