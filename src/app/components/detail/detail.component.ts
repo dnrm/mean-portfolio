@@ -4,6 +4,7 @@ import { ProjectService } from '../../services/project.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { environment } from '../../../environments/environment';
 
+
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
