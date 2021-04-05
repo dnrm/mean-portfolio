@@ -8,4 +8,5 @@ export class Project {
         public langs: string,
         public image: string,
     ) { }
+
 }

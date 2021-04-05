@@ -51,7 +51,7 @@ export class EditComponent implements OnInit {
   }
 
   onSubmit(form) {
-    console.log(this.filesToUpload);
+    console.log(this.project);
     this._projectService.updateProject(this.project).subscribe(
       response => {
         console.log(response);
