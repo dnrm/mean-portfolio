@@ -35,7 +35,7 @@ export class CreateComponent implements OnInit {
       response => {
         console.log(response);
         if (response.project) {
-          this._uploadService.makeFileRequest(environment.API + 'upload-image/' + response.project._id, [], this.filesToUpload, 'image')
+          this._uploadService.makeFileRequest(environment.API + '/upload-image/' + response.project._id, [], this.filesToUpload, 'image')
             .then((result: any) => {
               this.status = 'success';
               this.savedProject = result.project;
